@@ -161,7 +161,7 @@
 
 .article__text {
   line-height: 130%;
-  color: var(--text-color); 
+  color: var(--text-color);
 }
 
 .section__article-text-link {
@@ -331,7 +331,7 @@
     grid-row: 1 / 2;
   }
 
-  .card__image-ice-cream{
+  .card__image-ice-cream {
     grid-row: 1 / 3;
   }
 

@@ -1,0 +1,129 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: var(--main-font);
+  color: var(--text-color);
+  font-size: 18px;
+  padding-inline: 10px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  padding-block: 10px;
+  align-items: center;
+}
+
+.decorated-zone {
+  position: relative;
+  min-block-size: 100vb;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.decorated-zone::before {
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+  inset-block-start: 10px;
+  inset-inline-end: 0;
+}
+
+.decorated-zone::after {
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+  inset-block-end: 10px;
+  inset-inline-start: 0;
+}
+
+.decorated-rec {
+  display: flex;
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  color: var(--rec-color);
+}
+
+.decorated-rec::after {
+  content: '';
+  align-self: center;
+  display: block;
+  border-radius: 50%;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--rec-color);
+  box-shadow: 0 0 4px 2px var(--rec-color);
+  margin-inline-start: 10px;
+}
+
+.decorated-rec::before {
+  content: "REC";
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: 0;
+  color: var(--button-color);
+  text-transform: lowercase;
+  outline: none;
+  padding-inline: 12px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-border-color);
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: currentColor;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+  pointer-events: none;
+}
+
+.header__title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+}
+
+.header__text {
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.title-decor {
+  color: var(--heading-color);
+  background-color: var(--accent-color);
+  font-size: inherit;
+}

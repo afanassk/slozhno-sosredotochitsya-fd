@@ -127,3 +127,89 @@
   background-color: var(--accent-color);
   font-size: inherit;
 }
+
+.main {
+  margin-block: 40px;
+  font-size: 18px;
+}
+
+.section__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-block-end: 50px;
+}
+
+.focus-challenges {
+  display: flex;
+  flex-direction: column;
+}
+
+.content__title {
+  color: var(--content-title-color);
+  font-size: inherit;
+  line-height: 130%;
+}
+
+.article {
+  display: grid;
+  gap: 10px;
+}
+
+.article__text {
+  line-height: 130%;
+  color: var(--text-color); 
+}
+
+.section__article-text-link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.section__article-text-link:hover {
+  border-block-end: 1px solid var(--link-effects);
+}
+
+.section__article-text-link:focus {
+  padding: 1px;
+  border: 1px solid var(--link-effects);
+}
+
+.concentration-killers {
+  display: flex;
+  flex-direction: column;
+}
+
+.focus-hacks {
+  display: flex;
+  flex-direction: column;
+}
+
+.article__advice-title {
+  margin-block-end: 10px;
+}
+
+.article__title {
+  font-weight: 400;
+}
+
+.section__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block-end: 40px;
+  padding-block-start: 3px;
+}
+
+.card__block {
+  display: grid;
+  gap: 10px;
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  grid-row: auto;
+  grid-column: auto;
+}

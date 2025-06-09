@@ -200,7 +200,7 @@
   flex-direction: column;
   gap: 10px;
   margin-block-end: 40px;
-  padding-block-start: 3px;
+  padding-block-start: 5px;
 }
 
 .card__block {
@@ -314,14 +314,14 @@
   }
 
   .card__title {
-    margin-block-end: 12px;
+    margin-block-end: 4px;
     grid-column: 1 / 4;
   }
 
   .card__block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
     margin-block-end: 40px;
     padding-block-start: 4px;
   }
@@ -341,7 +341,10 @@
 
   .card__image-street {
     grid-column: 2 / 4;
-    padding-block-start: 5px;
+  }
+
+  .footer {
+    block-size: 92vh;
   }
 
   .footer__title {
@@ -392,5 +395,9 @@
 
   .card__image-street {
     padding-block-start: 1px;
+  }
+
+  .footer {
+    block-size: 100vh;
   }
 }

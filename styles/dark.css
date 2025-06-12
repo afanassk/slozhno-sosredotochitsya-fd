@@ -4,22 +4,6 @@
   переключая тему
 */
 
-:root.theme-dark {
-  --main-font: 'IBM Plex mono', monospace;
-  --bg-color: #000028;
-  --bg-image: url(../images/cover-image-dark.png);
-  --button-color: #FF0070;
-  --hover-border-color: rgba(255, 0, 112, 0.4);
-  --link-effects: #F1B2CE;
-  --accent-color: #FF0070;
-  --decor-color: #FF0070;
-  --rec-color: #FF0070;
-  --title-color: #DB00FF;
-  --content-title-color: #FF0070;
-  --heading-color: #000028;
-  --text-color: #F1B2CE;
-}
-
 .theme-dark .page {
   --main-font: 'IBM Plex mono', monospace;
   --bg-color: #000028;

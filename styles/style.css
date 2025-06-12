@@ -1,14 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
+  background-color: var(--bg-color, #000028);
+  background-image: var(--bg-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  font-family: var(--main-font);
-  color: var(--text-color);
+  font-family: var(--main-font, monospace);
+  color: var(--text-color, #F1B2CE);
   font-size: 18px;
   padding-inline: 10px;
 }
@@ -39,15 +39,15 @@
 }
 
 .decorated-zone::before {
-  border-inline-end: 1px solid var(--decor-color);
-  border-block-start: 1px solid var(--decor-color);
+  border-inline-end: 1px solid var(--decor-color, #FF0070);
+  border-block-start: 1px solid var(--decor-color, #FF0070);
   inset-block-start: 10px;
   inset-inline-end: 0;
 }
 
 .decorated-zone::after {
-  border-inline-start: 1px solid var(--decor-color);
-  border-block-end: 1px solid var(--decor-color);
+  border-inline-start: 1px solid var(--decor-color, #FF0070);
+  border-block-end: 1px solid var(--decor-color, #FF0070);
   inset-block-end: 10px;
   inset-inline-start: 0;
 }
@@ -57,7 +57,7 @@
   position: absolute;
   top: 11px;
   right: 10px;
-  color: var(--rec-color);
+  color: var(--rec-color, #FF0070);
 }
 
 .decorated-rec::after {
@@ -67,8 +67,8 @@
   border-radius: 50%;
   inline-size: 9px;
   block-size: 9px;
-  background-color: var(--rec-color);
-  box-shadow: 0 0 4px 2px var(--rec-color);
+  background-color: var(--rec-color, #FF0070);
+  box-shadow: 0 0 4px 2px var(--rec-color, #FF0070);
   margin-inline-start: 10px;
 }
 
@@ -89,7 +89,7 @@
 .header__theme-menu-button {
   background-color: transparent;
   border: 0;
-  color: var(--button-color);
+  color: var(--button-color, #FF0070);
   text-transform: lowercase;
   outline: none;
   padding-inline: 12px;
@@ -97,11 +97,11 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--hover-border-color);
+  border: 1px solid var(--hover-border-color, rgba(255, 0, 112, 0.4));
 }
 
 .header__theme-menu-button:focus {
-  border-block-end: 1px solid var(--button-color);
+  border-block-end: 1px solid var(--button-color, #FF0070);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -109,14 +109,14 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--button-color);
+  border: 1px solid var(--button-color, #FF0070);
   pointer-events: none;
 }
 
 .header__title {
-  color: var(--title-color);
+  color: var(--title-color, #DB00FF);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
   line-height: 83%;
 }
 
@@ -126,8 +126,8 @@
 }
 
 .title-decor {
-  color: var(--heading-color);
-  background-color: var(--accent-color);
+  color: var(--heading-color, #000028);
+  background-color: var(--accent-color, #FF0070);
   font-size: inherit;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .content__title {
-  color: var(--content-title-color);
+  color: var(--content-title-color, #FF0070);
   font-size: inherit;
   line-height: 130%;
 }
@@ -160,20 +160,20 @@
 
 .article__text {
   line-height: 130%;
-  color: var(--text-color);
+  color: var(--text-color, #F1B2CE);
 }
 
 .section__article-text-link {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
 }
 
 .section__article-text-link:hover {
-  border-block-end: 1px solid var(--link-effects);
+  border-block-end: 1px solid var(--link-effects, #F1B2CE);
 }
 
 .section__article-text-link:focus {
   padding: 1px;
-  border: 1px solid var(--link-effects);
+  border: 1px solid var(--link-effects, #F1B2CE);
 }
 
 .concentration-killers {
@@ -226,9 +226,9 @@
 }
 
 .footer__title {
-  color: var(--title-color);
+  color: var(--title-color, #DB00FF);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
   line-height: 83%;
 }
 

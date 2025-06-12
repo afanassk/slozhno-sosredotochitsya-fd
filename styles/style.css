@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-color: var(--bg-color, #000028);
   background-image: var(--bg-image, url(../images/cover-image-dark.png));
@@ -13,17 +11,7 @@
   padding-inline: 10px;
 }
 
-.header {
-  inline-size: 100%;
-  block-size: 100vh;
-  min-block-size: 668px;
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  align-items: center;
-  padding-block: 10px;
-  margin-block-end: 40px;
-}
-
+/* Общие стили для декора*/
 .decorated-zone {
   position: relative;
   min-block-size: 100vb;
@@ -76,6 +64,25 @@
   content: "REC";
 }
 
+.title-decor {
+  color: var(--heading-color, #000028);
+  background-color: var(--accent-color, #FF0070);
+  font-size: inherit;
+}
+
+/* Шапка сайта */
+.header {
+  inline-size: 100%;
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  padding-block: 10px;
+  margin-block-end: 40px;
+}
+
+/* Меню */
 .header__theme-menu {
   justify-self: end;
 }
@@ -125,26 +132,17 @@
   line-height: 130%;
 }
 
-.title-decor {
-  color: var(--heading-color, #000028);
-  background-color: var(--accent-color, #FF0070);
-  font-size: inherit;
-}
-
+/* Основное содержимое */
 .main {
   font-size: 18px;
 }
 
+/* Общие стили в секциях*/
 .section__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-block-end: 50px;
-}
-
-.focus-challenges {
-  display: flex;
-  flex-direction: column;
+  margin-block-end: 51px;
 }
 
 .content__title {
@@ -176,38 +174,52 @@
   border: 1px solid var(--link-effects, #F1B2CE);
 }
 
+/* Секция "Почему сосредоточиться так сложно" */
+.focus-challenges {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Секция "Что снижает концентрацию внимания?" */
 .concentration-killers {
   display: flex;
   flex-direction: column;
 }
 
+/* Секция "Как концентрироваться лучше" */
 .focus-hacks {
   display: flex;
   flex-direction: column;
 }
 
-.article__advice-title {
+.focus-hacks__advice-title {
   margin-block-end: 10px;
 }
 
-.article__title {
+.focus-hacks__title {
   font-weight: 400;
 }
 
-.section__card {
+.focus-hacks__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+/* Секция "А можно в картинках?" */
+.section__gallery {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-block-start: 5px;
 }
 
-.card__block {
+.gallery {
   display: grid;
   gap: 10px;
   margin-block-end: 40px;
 }
 
-.card__image {
+.gallery__image {
   display: block;
   inline-size: 100%;
   block-size: 100%;
@@ -216,6 +228,7 @@
   grid-column: auto;
 }
 
+/* Подвал */
 .footer {
   block-size: 100vh;
   min-block-size: 668px;
@@ -232,6 +245,7 @@
   line-height: 83%;
 }
 
+/* Медиазапросы */
 @media (min-width: 768px) {
   
   .page {
@@ -267,7 +281,7 @@
   }
 
   .section__container {
-    margin-block-end: 80px;
+    margin-block-end: 81px;
   }
 
   .focus-challenges {
@@ -295,47 +309,40 @@
     display: grid;
   }
 
-  .focus-hacks 
-  .content__title {
+  .focus-hacks__content {
+    display: grid;
+    row-gap: 20px;
+    grid-column: 2 / 4;
     grid-row: 1 / 3;
-  }
-
-  .focus-hacks
-  .article {
     padding-inline-start: 7px;
   }
 
-  .focus-hacks 
-  .title-decor {
-    grid-column: 2 / 4;
-  }
-
-  .card__title {
-    margin-block-end: 5px;
+  .gallery__title {
+    margin-block-end: 7px;
     grid-column: 1 / 4;
   }
 
-  .card__block {
+  .gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-block-end: 60px;
-    padding-block-start: 4px;
+    padding-block-start: 3px;
   }
 
-  .card__image-sunset {
+  .gallery__image-sunset {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
   }
 
-  .card__image-ice-cream {
+  .gallery__image-ice-cream {
     grid-row: 1 / 3;
   }
 
-  .card__image-tape {
+  .gallery__image-tape {
     grid-row: 2 / 4;
   }
 
-  .card__image-street {
+  .gallery__image-street {
     grid-column: 2 / 4;
   }
 
@@ -366,17 +373,12 @@
     grid-template-rows: min-content 1fr;
   }
 
-  .concentration-killers-block {
+  .concentration-killers__content {
     grid-column: span 1;
     grid-row: auto;
   }
 
-  .focus-hacks 
-  .article {
-    padding-inline-start: 0;
-  }
-
-  .card__image-street {
-    padding-block-start: 1px;
+  .focus-hacks__content {
+    padding-inline-start: 0px;
   }
 }

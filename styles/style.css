@@ -180,6 +180,12 @@
   flex-direction: column;
 }
 
+.focus-challenges__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* Секция "Что снижает концентрацию внимания?" */
 .concentration-killers {
   display: flex;
@@ -203,7 +209,7 @@
 .focus-hacks__content {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  gap: 20px;
 }
 
 /* Секция "А можно в картинках?" */
@@ -287,16 +293,16 @@
   .article {
     display: flex;
     flex-direction: column;
-    grid-column: 2 / 4;
   }
 
   .focus-challenges {
     display: grid;
   }
 
-  .focus-challenges
-  .article {
+  .focus-challenges__content {
     padding-inline-start: 7px;
+    grid-column: 2 / 4;
+    gap: 20px;
   }
 
   .concentration-killers 
@@ -360,8 +366,7 @@
     flex-direction: row;
   }
 
-  .focus-challenges 
-  .article {
+  .focus-challenges__content {
     padding-inline-start: 0;
   }
 
